@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Wox</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <base href="/">
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-future.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-flat.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-block.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-air.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-ice.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/angular-bootstrap-colorpicker/css/colorpicker.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/plugin.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/userinfo.css">
+    <link rel="stylesheet" href="styles/release.css">
+    <link rel="stylesheet" href="styles/theme.builder.css">
+    <!-- endbuild -->
+
+</head>
+<body ng-app="woxApp">
+<div class="header">
+    <nav class="navbar navbar-default" role="navigation">
+         <div class="container">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/#/">Wox</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                  <a href="/#plugin" class="dropdown-toggle">Plugins</a>
+                  </li>
+                  <li>
+                  <a href="/#theme/builder" class="dropdown-toggle">Themes</a>
+                  </li>
+                  <li>
+                  <a href="http://discussion.getwox.com" class="dropdown-toggle">Discussions</a>
+                  </li>
+                  <li>
+                  <a href="http://doc.getwox.com" target="_blank" class="dropdown-toggle">Docs</a>
+                  </li>
+                  <li>
+                  <a href="/#donate" class="dropdown-toggle">Donations</a>
+                  </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li ng-if="!logined"><a href="/#login">Login</a></li>
+                  <li ng-if="!logined"><a href="/#register">Sign up</a></li>
+                  <li ng-if="logined"><a href="/#u/{{ user.id }}">{{ user.name }}</a></li>
+                  <li ng-if="logined"><a href="/#logout">Logout</a></li>
+              </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </div>
+      </nav>
+</div>
+
+<div class="content" ng-view=""></div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row link-container">
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding:0;">
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <a href="https://www.linode.com/?r=7b55c256dc54d2cfb75190996b67c8b6930f7086" target="_blank"
+                   title="Host in Linode">
+                    <img src="/images/linode_logo.png" width="86">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/messenger/build/js/messenger.js"></script>
+<script src="bower_components/messenger/build/js/messenger-theme-future.js"></script>
+<script src="bower_components/messenger/build/js/messenger-theme-flat.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
+<script src="bower_components/marked/lib/marked.js"></script>
+<script src="bower_components/angular-marked/angular-marked.js"></script>
+<script src="bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/plugin.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/services/api.js"></script>
+<script src="scripts/services/notify.js"></script>
+<script src="scripts/services/auth.js"></script>
+<script src="scripts/directives/ngenter.js"></script>
+<script src="scripts/controllers/logout.js"></script>
+<script src="scripts/filters/apiurl.js"></script>
+<script src="scripts/controllers/plugin.create.js"></script>
+<script src="scripts/controllers/plugin.detail.js"></script>
+<script src="scripts/controllers/register.js"></script>
+<script src="scripts/controllers/userinfo.js"></script>
+<script src="scripts/controllers/plugin.edit.js"></script>
+<script src="scripts/controllers/release.js"></script>
+<script src="scripts/controllers/release.create.js"></script>
+<script src="scripts/controllers/release.edit.js"></script>
+<script src="scripts/services/paginate.js"></script>
+<script src="scripts/controllers/theme.builder.js"></script>
+<script src="scripts/controllers/dashboard.js"></script>
+<script src="scripts/controllers/donate.js"></script>
+<script src="scripts/controllers/release.version.js"></script>
+<!-- endbuild -->
+
+
+<!-- sharethis -->
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+    if(typeof stLight !== "undefined"){
+        stLight.options({publisher: "c3bcaffa-d21f-4870-86d5-cc5ef54e30a5", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+    }
+</script>
+<!-- end sharethis -->
+
+<script type='text/javascript'>
+(function() {
+    var c = document.createElement('script');
+    c.type = 'text/javascript';
+    c.async = true;
+    c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.clicki.cn/boot/50660';
+    var h = document.getElementsByTagName('script')[0];
+    h.parentNode.insertBefore(c, h);
+})();
+</script>
+
+</body>
+</html>

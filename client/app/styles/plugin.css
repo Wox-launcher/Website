@@ -1,0 +1,137 @@
+.upload-plugin {
+    margin-top: 30px;
+}
+
+.upload-plugin .form-control {
+    display: inline-block;
+    width: 98% !important;
+}
+
+.plugin-list {
+    margin-top: 30px;
+}
+
+.plugin-icon {
+    vertical-align: middle !important;
+    width: 70px;
+}
+
+.plugin-lastupdate {
+    width: 300px;
+}
+
+.plugin-tr {
+    border-top: 1px solid #eeeeee;
+}
+
+.like-plugin {
+    cursor: pointer;
+}
+
+.author {
+    padding-right: 10px;
+}
+
+.plugin-code code {
+    background-color: #202020;
+    border: 4px solid silver;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #6e6e6e;
+    color: #e2e2e2;
+    display: block;
+    font: 1.5em 'andale mono', 'lucida console', monospace;
+    line-height: 1.5em;
+    overflow: auto;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.plugin-author {
+    font-size: 16px !important;
+    color: gray;
+    position: relative;
+    top: 30px;
+}
+.plugin-preview{
+    margin-top:40px;
+    text-align: center;
+    align-content: center;
+}
+.plugin-long-description{
+    margin-top:40px;
+}
+.plugin-title, .plugin-title h1{
+    margin-top:0;
+}
+.plugin-liked{
+    margin-top:20px;
+}
+
+.drap-and-drop
+{
+    padding: 16px 0;
+    height: inherit;
+    line-height: 35px;
+    font-size: 14px;
+    text-align: center;
+    border-color: #ddd;
+    border-style: dashed;
+    color: #aaa;
+    background-color: #fafafa;
+}
+.drap-and-drop .default
+{
+    display:inline-block;
+}
+.manual-file-chooser
+{
+    position: absolute;
+    width: 240px;
+    padding: 5px;
+    margin-left: 160px;
+    margin-top: -30px;
+    cursor:pointer;
+    opacity: 0.0001;
+}
+.drop-target .mega-octicon {
+    vertical-align: middle;
+    color: #e5e5e5
+    font: normal normal 32px octicons;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    font-smoothing: antialiased;
+}
+.submit-plugin
+{
+    margin-right:15px;
+}
+.fa-close
+{
+    color:chocolate;
+    cursor:pointer;
+}
+textarea.plugin-long-desc
+{
+    min-height:150px;
+}
+.plugin-comment
+{
+    margin-top:30px;
+}
+
+.plugin-preview
+{
+    max-width: 800px;
+}
+
+.plugin-share
+{
+  margin-top:30px;
+}
+
+@media screen and (max-width: 992px) {
+    .plugin-sidebar {
+        display: none !important;
+    }
+}

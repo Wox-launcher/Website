@@ -1,0 +1,27 @@
+<div class="releasecreate conent-container" ng-cloak>
+    <div class="form-horizontal">
+        <div class="container">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="version" placeholder="E.g. 1.0.0"/>
+            </div>
+             <div class="form-group">
+                <input type="text" class="form-control" ng-model="link1" placeholder="Download link"/>
+            </div>
+             <div class="form-group">
+                <input type="text" class="form-control" ng-model="link2" placeholder="Backup download link (Optional)"/>
+            </div>
+             <div class="form-group">
+                <input type="text" class="form-control" ng-model="link3" placeholder="Backup download link 2 (Optional)"/>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control plugin-long-desc" ng-model="desc"
+                          placeholder="A detailed description, support markdown"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="pull-right">
+                    <button type="submit" ng-click="submitRelease()" class="btn btn-primary form-control">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

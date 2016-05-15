@@ -1,0 +1,77 @@
+<div class="plugindetail conent-container">
+    <div class="container plugin-detail">
+        <div class="row">
+            <div class="col-md-2 plugin-sidebar">
+                <div>
+                    <img ng-src="{{ plugin.icon | apiurl }}" width="64"/>
+                </div>
+                <div class="plugin-liked">
+                    <a ng-if="plugin.github != ''" href="{{ plugin.github}}" title="{{ plugin.github}}" class="icon-padding"><span class="fa fa-github color-gray"></span></a>
+                    <a href="{{ plugin.plugin_file | apiurl}}" class="icon-padding"><span class="fa fa-download color-gray"></span></a>
+                    <i ng-click="likePlugin(plugin)" ng-class="plugin.liked_by_logined_user ? 'fa-heart':'fa-heart-o'"
+                       class="like-plugin fa icon-padding"></i>
+                    {{ plugin.liked_count }}
+                </div>
+                <div>
+                    Actionword: {{ plugin.action_keyword }}
+                </div>
+                <div ng-if="plugin.website != null">
+                    <a href="{{ plugin.website }}">Project Website</a>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="page-header plugin-title">
+                    <h1>
+                        {{ plugin.name }}
+                        <small>
+                            {{ plugin.version }}
+                        </small>
+                        <div class="pull-right plugin-author">
+                            by <a href="/#u/{{ plugin.created_by.id }}/">{{ plugin.created_by.username }}</a>
+                        </div>
+                    </h1>
+                </div>
+                <div>
+                    {{ plugin.description }}
+                </div>
+                <div class="plugin-code">
+                    <code>wpm install {{ plugin.name }}</code>
+                </div>
+                <div class="plugin-preview" ng-if="plugin.preview != ''">
+                    <img ng-src="{{ plugin.preview | apiurl }}" style="max-width: 700px;"/>
+                </div>
+                <div class="plugin-long-description well" marked="plugin.long_description"
+                     ng-if="plugin.long_description != null && plugin.long_description != ''">
+                </div>
+                <div class="plugin-share">
+                  <span class='st_facebook_large' displayText='Facebook'></span>
+                  <span class='st_twitter_large' displayText='Tweet'></span>
+                  <span class='st_googleplus_large' displayText='Google +'></span>
+                  <span class='st_pinterest_large' displayText='Pinterest'></span>
+                  <span class='st_sina_large' displayText='Sina'></span>
+                </div>
+                <div class="plugin-comment">
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                        var disqus_shortname = 'wox'; // required: replace example with your forum shortname
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                        powered by
+                        Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                            class="logo-disqus">Disqus</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="plugin conent-container" ng-cloak>
+    <div class="container search-plugin">
+        <div class="input-group col-md-offset-2 col-md-10">
+            <input ng-model="search" type="text" ng-enter="searchPlugin()" class="form-control"
+                   placeholder="Search in {{ allPluginCount }} plugins">
+
+            <div class="input-group-btn" role="group">
+                <button ng-click="searchPlugin()" required class="btn" type="button"><i class="fa fa-search"></i> Search
+                </button>
+                <button ng-click="uploadPlugin()" required class="btn" type="button"><i class="fa fa-upload"></i> Upload
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container plugin-list">
+        <table class="table borderless">
+            <tr class="plugin-tr" ng-repeat-start="p in plugins">
+                <td rowspan="2" class="plugin-icon">
+                    <img ng-src="{{ p.icon | apiurl }}" width="48"/>
+                </td>
+                <td>
+                    <a href="/#plugin/{{ p.id }}/">{{ p.name }}</a>
+                </td>
+                <td class="text-right">
+                    <i ng-click="likePlugin(p)" ng-class="p.liked_by_logined_user ? 'fa-heart':'fa-heart-o'"
+                       class="like-plugin fa"></i>
+                    <span>{{ p.liked_count }}</span>
+                </td>
+            </tr>
+            <tr ng-repeat-end>
+                <td>
+                    {{ p.description }}
+                </td>
+                <td class="text-right plugin-lastupdate">
+                    <span class="author">by <a href="/#u/{{ p.created_by.id }}/">{{ p.created_by.username }}</a></span>
+                    <span am-time-ago="p.created_date"></span>
+                </td>
+            </tr>
+        </table>
+        <nav>
+            <ul class="pager pull-right">
+                <li ng-class="currentPage > 1 ? '':'hide'"><a href="javascript:void(0);" ng-click="prevPage();">Previous</a></li>
+                <li ng-class="currentPage < totalPage ? '':'hide'"><a href="javascript:void(0);" ng-click="nextPage();">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

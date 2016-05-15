@@ -1,0 +1,144 @@
+.themebuilder > .row > div
+{
+    height:400px;
+}
+.themebuilder .builder-container
+{
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    color: rgb(51, 51, 51);
+    display: block;
+    font-family: arial, sans-serif;
+    height: 391px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    text-align: left;
+    width: 620px;
+}
+
+.themebuilder .search input
+{
+    border-bottom-color: rgb(234, 227, 203);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0px;
+    outline: none;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(234, 227, 203);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(234, 227, 203);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(234, 227, 203);
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    cursor: auto;
+    display: block;
+    font-family: arial, sans-serif;
+    font-size: 36px;
+    height: 60px;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    text-align: start;
+    text-indent: 0px;
+    text-shadow: none;
+    text-transform: none;
+    width: 600px;
+    word-spacing: 0px;
+    writing-mode: lr-tb;
+
+}
+
+.themebuilder .result .row > div
+{
+    height:50px;
+    padding:0;
+    margin:0;
+}
+.themebuilder .result .row
+{
+    margin:0;
+    padding:5px 0;
+}
+
+
+.themebuilder .result
+{
+    margin-top: 10px;
+}
+.themebuilder .ico
+{
+    background-image:url(/images/app.png);
+    background-image: url(/images/app.png);
+    background-size: 45px;
+    width:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+}
+.themebuilder .title
+{
+    height:25px;
+    padding-left:10px;
+    font-family: arial, sans-serif;
+    font-size: 20px;
+}
+.themebuilder .subtitle
+{
+    height:25px;
+    padding-left:10px;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+}
+
+/* COlor Picker*/
+#backgroundColor
+{
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+.themebuilder .colorName
+{
+    height: 36px;
+    white-space: nowrap;
+    line-height: 36px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.themebuilder .colorSelector
+{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    background: url(/images/colorpicker/select.png) center;
+}
+.downloadTheme
+{
+    margin-bottom:10px;
+}

@@ -1,0 +1,50 @@
+<div class="login conent-container">
+    <div class="container-fluid login-container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Sign up</strong>
+            </div>
+            <div class="panel-body">
+                <form role="form" id="loginFrm" method="post" class="form col-md-12 center-block">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">Username</div>
+                            <div class="col-sm-9">
+                                <input type="text" ng-model="name" ng-enter="register()" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">Email</div>
+                            <div class="col-sm-9">
+                                <input type="text" ng-model="email" ng-enter="register()" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">Password</div>
+                            <div class="col-sm-9">
+                                <input type="password" ng-model="password" ng-enter="register()" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3 text-right">Repassword</div>
+                            <div class="col-sm-9">
+                                <input type="password" ng-model="repassword" ng-enter="register()" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer login-footer">
+                <div class="col-sm-offset-9 col-sm-3">
+                    <button type="button" ng-click="register()" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+-r base.txt
+
+ipdb
+psycopg2
+django-rest-swagger
+django-debug-toolbar

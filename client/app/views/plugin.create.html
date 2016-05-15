@@ -1,0 +1,66 @@
+<div class="plugincreate conent-container" ng-cloak>
+    <div class="form-horizontal">
+        <div class="container upload-plugin">
+            <div class="form-group">
+                <div class="drap-and-drop form-control" ng-file-drop="addIconFile($files)"
+                     ng-file-drag-over-class="optional-css-class-name-or-function">
+                    <span class="default" ng-if="icon == null">
+                        <span class="mega-octicon fa fa-cloud-upload"></span>
+                        Attach Icon Image by dropping it here or
+                        <input type="file" ng-file-select="addIconFile($files)"
+                               class="manual-file-chooser js-manual-file-chooser">
+                        <a class="manual-file-chooser-text" href="javascript:void(0);">selecting Icon Image</a>
+                        </input>
+                    </span>
+                    <span class="filename" ng-if="icon != null">
+                        {{  icon.name }} <span class="fa fa-close" ng-click="removeIcon()"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="drap-and-drop form-control" ng-file-drop="addPluginFile($files)"
+                     ng-file-drag-over-class="optional-css-class-name-or-function">
+                    <span class="default" ng-if="plugin == null">
+                        <span class="mega-octicon fa fa-cloud-upload"></span>
+                        Attach Plugin by dropping it here or
+                        <input type="file" ng-file-select="addPluginFile($files)"
+                               class="manual-file-chooser js-manual-file-chooser">
+                        <a class="manual-file-chooser-text" href="javascript:void(0);">selecting Plugin</a>
+                        </input>
+                    </span>
+                    <span class="filename" ng-if="plugin != null">
+                        {{  plugin.name }} <span class="fa fa-close" ng-click="removePlugin()"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="drap-and-drop form-control" ng-file-drop="addPreviewFile($files)"
+                     ng-file-drag-over-class="optional-css-class-name-or-function">
+                    <span class="default" ng-if="preview == null">
+                        <span class="mega-octicon fa fa-cloud-upload" ng-if="preview == null"></span>
+                        Attach Preview Image by dropping it here or
+                        <input type="file" ng-file-select="addPreviewFile($files)"
+                               class="manual-file-chooser js-manual-file-chooser">
+                        <a class="manual-file-chooser-text" href="javascript:void(0);">selecting Preview Image</a>
+                        </input> (Optional)
+                    </span>
+                    <span class="filename" ng-if="preview != null">
+                        {{  preview.name }} <span class="fa fa-close" ng-click="removePreview()"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="github" placeholder="Github link (Optional)"/>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control plugin-long-desc" ng-model="desc"
+                          placeholder="A detailed description, support markdown (Optional)"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="pull-right submit-plugin">
+                    <button type="submit" ng-click="submitPlugin()" class="btn btn-primary form-control">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

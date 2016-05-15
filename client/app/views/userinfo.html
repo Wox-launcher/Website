@@ -1,0 +1,85 @@
+<div class="userinfo conent-container">
+
+    <div class="container">
+
+        <div class="page-header">
+            <i class="fa fa-user"></i><span>{{ user.username }}'s Profile</span>
+        </div>
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li ng-class="activetab == 'plugin' ? 'active':''"><a  ng-click="switchTabPane('plugin')" role="tab" data-toggle="tab">Plugins</a></li>
+            <!--<li ng-class="activetab == 'theme' ? 'active':''"><a  ng-click="switchTabPane('theme')" role="tab" data-toggle="tab">Themes</a></li>-->
+            <li ng-if="user.is_owner" ng-class="activetab == 'auth' ? 'active':''">
+            <a  ng-click="switchTabPane('auth')" role="tab" data-toggle="tab">Auth</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane" ng-class="activetab == 'plugin' ? 'active':''">
+                <table class=" table borderless table-striped info-plugin ">
+                    <tr class="plugin-tr" ng-repeat="p in user.plugins">
+                        <td class="plugin-icon" style="width:32px;">
+                            <img ng-src="{{ p.icon | apiurl }}" width="32"/>
+                        </td>
+                        <td>
+                            <a href="/#plugin/{{ p.id }}/">{{ p.name }}</a>
+                        </td>
+                        <td class="text-right" style="width:300px;">
+                            <span class="info-plugin-like">
+                                <i ng-click="likePlugin(p)"
+                                    ng-class="p.liked_by_logined_user ? 'fa-heart':'fa-heart-o'"
+                                    class="like-plugin fa"></i> {{ p.liked_count }}
+                            </span>
+                            <a ng-if="user.is_owner" href="/#plugin/{{ p.id }}/edit" class="btn btn-primary">Edit</a>
+                            <a ng-if="user.is_owner" href="javascript:void(0);" ng-click="deletePlugin(p)"
+                                class="btn btn-danger delete-plugin">Delete</a>
+                        </td>
+                    </tr>
+                </table>
+                <div ng-if="user.plugins.length == 0" class="text-center">
+                    {{ user.username }} doesn't create any plugins.
+                </div>
+            </div>
+            <!--<div class="tab-pane" ng-class="activetab == 'theme' ? 'active':''">-->
+               <!--Coming soon. -->
+            <!--</div>-->
+            <div class="tab-pane" ng-class="activetab == 'auth' ? 'active':''">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Username</label>
+                        <div class="col-sm-10">
+                            <span class="form-control" disabled>{{ user.username }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <span class="form-control" disabled>{{ user.mail }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Old Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" ng-model="oldpwd" ng-enter="updatePwd()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">New Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" ng-model="newpwd" ng-enter="updatePwd()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Re-Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" ng-model="newpwd2" ng-enter="updatePwd()">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="button" class="btn btn-primary pull-right" value="Update Password" ng-click="updatePwd()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

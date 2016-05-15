@@ -1,0 +1,25 @@
+.userinfo .tab-pane {
+    margin-top: 20px;
+}
+
+.userinfo .info-plugin td {
+    vertical-align: middle !important;
+}
+
+.userinfo .info-plugin-like {
+    margin-right: 10px;
+}
+
+.userinfo .page-header {
+    border: 0 !important;
+    margin-top: 0;
+}
+
+.userinfo .page-header span {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.userinfo .nav-tabs > li {
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+Unipath
+pillow
+Django
+djangorestframework==2.4.1
+django-filter
+django-cors-headers
+pytz
+django-extensions
+simplejson

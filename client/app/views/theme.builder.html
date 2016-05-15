@@ -1,0 +1,98 @@
+<div class="container conent-container themebuilder">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <a class="btn btn-primary downloadTheme" ng-click="downloadTheme();" id="downloadThemeId">Download
+                    Theme</a>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">Background:</div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="colorSelector" ng-style="{'background-color':theme.backgroundColor}" colorpicker colorpicker-with-input="true"
+                         ng-model="theme.backgroundColor"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">QueryBox Background:</div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="colorSelector" ng-style="{'background-color':theme.queryBoxBackgroundColor}" colorpicker-with-input="true" colorpicker
+                         ng-model="theme.queryBoxBackgroundColor"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">QueryBox Text:</div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="colorSelector" ng-style="{'background-color':theme.queryBoxTextColor}" colorpicker-with-input="true" colorpicker
+                         ng-model="theme.queryBoxTextColor"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">Result Title:</div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="colorSelector" ng-style="{'background-color':theme.resultTitleColor}" colorpicker-with-input="true" colorpicker
+                         ng-model="theme.resultTitleColor"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">Result SubTitle:</div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="colorSelector" ng-style="{'background-color':theme.resultSubTitleColor}" colorpicker-with-input="true" colorpicker
+                         ng-model="theme.resultSubTitleColor"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">Selected Result Title:</div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="colorSelector" ng-style="{'background-color':theme.resultSelectedTitleColor}"
+                         colorpicker-with-input="true" colorpicker
+                         ng-model="theme.resultSelectedTitleColor"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">Selected Result SubTitle:</div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="colorSelector" ng-style="{'background-color':theme.resultSelectedSubTitleColor}"
+                          colorpicker-with-input="true" colorpicker
+                         ng-model="theme.resultSelectedSubTitleColor"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 colorName">Selected Result Background:</div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="colorSelector" ng-style="{'background-color':theme.resultSelectedBackgroundColor}"
+                         colorpicker-with-input="true" colorpicker
+                         ng-model="theme.resultSelectedBackgroundColor"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="builder-container"
+                 ng-style="{'background-color':theme.backgroundColor}">
+                <div class="liner">
+                    <div class="search">
+                        <input name="themename" value="Hello Wox"
+                               ng-style="{'background-color':theme.queryBoxBackgroundColor,'color':theme.queryBoxTextColor}">
+                    </div>
+                    <div class="result">
+                        <div class="row" ng-repeat="r in rows"
+                             ng-style="{'background-color':r.hover?theme.resultSelectedBackgroundColor :theme.backgroundColor}">
+                            <div class="col-md-2 ico"></div>
+                            <div class="col-md-11">
+                                <div class="title"
+                                     ng-style="{'color':r.hover?theme.resultSelectedTitleColor :theme.resultTitleColor}">
+                                    {{r.title}}
+                                </div>
+                                <div class="subtitle"
+                                     ng-style="{'color':r.hover?theme.resultSelectedSubTitleColor:theme.resultSubTitleColor}">
+                                    {{r.subtitle}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

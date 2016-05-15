@@ -1,0 +1,46 @@
+<!--loading manually, since it's too large-->
+<script src="/bower_components/echarts/build/dist/echarts-all.js"></script>
+
+<div class="dashboard container conent-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-area-chart"></i> Summary</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        User Count:
+                        <span class="label label-primary">{{ summary.user_count }}</span>
+                    </div>
+                    <div>
+                        Plugin Count:
+                        <span class="label label-primary">{{ summary.plugin_count }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-area-chart"></i> Upgrade Request Today</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="upgrade-request-today" style="height:250px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-area-chart"></i> Upgrade Request This Month</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="upgrade-request-month" style="height:250px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
