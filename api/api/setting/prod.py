@@ -14,12 +14,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'wox',  # Or path to database file if using sqlite3.
-        'USER': '',
-        'PASSWORD': '',
+        'USER': 'postgres',
+        'PASSWORD': 'scott',
         'HOST': 'localhost',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '5432',  # Set to empty string for default.
     }
 }
 
-STATIC_ROOT = "/var/www/wox_static"
-MEDIA_ROOT = "/var/www/wox_media"
+STATIC_ROOT = "/app/wox/wox_static"
+MEDIA_ROOT = "/app/wox/wox_media"

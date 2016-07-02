@@ -70,7 +70,7 @@ def buildclient():
     """build client"""
     with lcd(os.path.join(BASE_DIR,"client")):
         local("bower install --allow-root")
-        local("grunt build")
+        local("grunt build --force")
 
 def run():
     """run app"""
@@ -82,7 +82,7 @@ def run():
 
 def builddoc():
     """build gitbook doc"""
-    with lcd("/var/www/wox_doc"):
+    with lcd("/app/wox_doc"):
 	local("git pull")
   	local("gitbook build")
 
@@ -94,7 +94,7 @@ def backup():
     if not os.path.exists(backup_folder):
 	os.mkdir(backup_folder)
 
-    with lcd("/var/www"):
+    with lcd("/app"):
 	local("zip -r {} {}".format(os.path.join(backup_folder,"media.zip"),"wox_media"))
     with lcd(backup_folder):
 	local("PGPASSWORD=scott pg_dump -U wox wox > {}".format("woxdb.dump"))
