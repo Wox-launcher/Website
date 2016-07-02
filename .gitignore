@@ -17,3 +17,6 @@ client/app/scripts/config.js
 backup/
 
 _book/
+
+wox_media/
+wox_static/

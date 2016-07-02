@@ -82,8 +82,7 @@ def run():
 
 def builddoc():
     """build gitbook doc"""
-    with lcd("/app/wox_doc"):
-	local("git pull")
+    with lcd("/app/wox/doc"):
   	local("gitbook build")
 
 def backup():
