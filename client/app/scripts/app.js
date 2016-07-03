@@ -133,67 +133,10 @@ angular
                     }
                 }
             })
-            .when('/release', {
-                title: 'Release',
-                templateUrl: 'views/release.html',
-                controller: 'ReleaseCtrl',
-                resolve: {
-                    releases: function (api, $route) {
-                        return api.get("/release/").then(
-                            function success(r) {
-                                return r.data;
-                            }
-                        );
-                    }
-                }
-            })
-            .when('/release/create', {
-                title: 'Create Release',
-                templateUrl: 'views/release.create.html',
-                controller: 'ReleaseCreateCtrl'
-            })
-            .when('/release/version/:version', {
-                title: 'Release',
-                templateUrl: 'views/release.version.html',
-                controller: 'ReleaseVersionCtrl',
-                resolve: {
-                    release: function (api, $route) {
-                        return api.get("/release/" + $route.current.params.version + "/").then(
-                            function success(r) {
-                                return r.data;
-                            }
-                        );
-                    }
-                }
-            })
-            .when('/release/:id/edit', {
-                title: 'Edit Release',
-                templateUrl: 'views/release.edit.html',
-                controller: 'ReleaseEditCtrl',
-                resolve: {
-                    release: function (api, $route) {
-                        return api.get("/release/" + $route.current.params.id + "/").then(
-                            function success(r) {
-                                return r.data;
-                            }
-                        );
-                    }
-                }
-            })
             .when('/theme/builder', {
                 title: 'Theme Builder',
                 templateUrl: 'views/theme.builder.html',
                 controller: 'ThemeBuilderCtrl'
-            })
-            .when('/dashboard', {
-                title: 'Dashboard',
-                templateUrl: 'views/dashboard.html',
-                controller: 'DashboardCtrl'
-            })
-            .when('/donate', {
-              title: 'Donations',
-              templateUrl: 'views/donate.html',
-              controller: 'DonateCtrl'
             })
             .otherwise({
                 redirectTo: '/'
