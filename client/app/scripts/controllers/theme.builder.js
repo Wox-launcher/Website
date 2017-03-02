@@ -37,7 +37,7 @@ angular.module('woxApp')
     <Style x:Key="ItemSubTitleSelectedStyle" BasedOn="{StaticResource BaseItemSubTitleSelectedStyle}" TargetType="{x:Type TextBlock}"> \
         <Setter Property="Foreground" Value="<resultSelectedSubTitleColor>" /> \
     </Style> \
-    <Color x:Key="ItemSelectedBackgroundColor"><resultSelectedBackgroundColor></Color> \
+    <SolidColorBrush x:Key="ItemSelectedBackgroundColor"><resultSelectedBackgroundColor></SolidColorBrush> \
     <Style x:Key="ThumbStyle" BasedOn="{StaticResource BaseThumbStyle}" TargetType="{x:Type Thumb}"> \
     </Style> \
     <Style x:Key="ScrollBarStyle" BasedOn="{StaticResource BaseScrollBarStyle}" TargetType="{x:Type ScrollBar}"> \
