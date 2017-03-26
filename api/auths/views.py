@@ -70,8 +70,11 @@ class AuthAPIViewSet(GenericViewSet):
         username = request.DATA.get("username")
         password = request.DATA.get("password")
         email = request.DATA.get("email")
-        user = User.objects.create_user(username=username, password=password, email=email)
-        if user:
-            return apiresponse.success({"userId": user.pk})
-        else:
+        if "inbound" in email:
             return apiresponse.error("register failed")
+        else:
+            user = User.objects.create_user(username=username, password=password, email=email)
+            if user:
+                return apiresponse.success({"userId": user.pk})
+            else:
+                return apiresponse.error("register failed")
