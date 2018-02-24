@@ -8,7 +8,7 @@ ALLOWED_HOSTS = ["*"]
 
 ADMINS = (('qianlifeng', 'qianlf2008@163.com'),)
 
-CSRF_COOKIE_DOMAIN = ".getwox.com"
+CSRF_COOKIE_DOMAIN = ".wox.one"
 
 DATABASES = {
     'default': {

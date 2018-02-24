@@ -58,10 +58,10 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:9000',
     '127.0.0.1:9000',
-    'api.getwox.com',
-    'getwox.com',
-    'www.getwox.com',
-    'new2.getwox.com',
+    'api.wox.one',
+    'wox.one',
+    'www.wox.one',
+    'new2.wox.one',
 )
 
 MIDDLEWARE_CLASSES = (

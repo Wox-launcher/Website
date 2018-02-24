@@ -100,7 +100,7 @@ Before written Wox, I always wanted to write a launcher. I like to using hotkeys
   # User plugins
   ----------------------------
 
-  In addition to built-in system plugins, Wox also provides platform for creators to share their plugins. [http://www.getwox.com/plugin] (http://www.getwox.com/plugin)
+  In addition to built-in system plugins, Wox also provides platform for creators to share their plugins. [http://www.wox.one/plugin] (http://www.wox.one/plugin)
 
   At present, the Wox supports plugin written by (but not limited) to 'C#' and 'Python', users can even use 'C','Ruby','Nodejs','Go' languages to write Wox plugin. If you want to know how to write Wox plugin, you can go to [here] (/en/plugin/create_plugin.html) in the Guide.
 
@@ -111,7 +111,7 @@ Before written Wox, I always wanted to write a launcher. I like to using hotkeys
 
   Wox supports themes. You can choose your favorite theme.
 
-  In addition, we also offer an online theme maker [ThemeBuilder](http://www.getwox.com/theme/Builder). Once theme is configured on the Web site, click on download, and rename it as following format: `<your theme name>.xaml`. You can then put this theme file in Theme directory in the root of Wox directory and restart the Wox. After restart Wox, user can see new theme in the theme list.
+  In addition, we also offer an online theme maker [ThemeBuilder](http://www.wox.one/theme/Builder). Once theme is configured on the Web site, click on download, and rename it as following format: `<your theme name>.xaml`. You can then put this theme file in Theme directory in the root of Wox directory and restart the Wox. After restart Wox, user can see new theme in the theme list.
 
   # Hotkey
   -------------------------------------

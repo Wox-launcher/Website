@@ -327,7 +327,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 constants: {
-                    apiurl: 'http://api.getwox.com',
+                    apiurl: 'http://api.wox.one',
                     env : "prod"
                 }
             }

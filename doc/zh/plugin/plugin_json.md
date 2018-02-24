@@ -1,4 +1,4 @@
-在创建Wox的时候，用户必须在插件的根目录方式一个名为`plugin.json`的文件。该文件中包含了该插件的一些基本信息。在用户上传插件到[getwox.com](http://www.getwox.com)的时候，
+在创建Wox的时候，用户必须在插件的根目录方式一个名为`plugin.json`的文件。该文件中包含了该插件的一些基本信息。在用户上传插件到[wox.one](http://www.wox.one)的时候，
 我们会读取这个文件中的信息。  
 
 `plugin.json`的格式如下：
@@ -12,7 +12,7 @@
   "Author":"qianlifeng",                     //作者
   "Version":"1.0.0",                         //插件版本，必须是x.x.x的格式
   "Language":"csharp",                       //插件语言，目前支持csharp,python
-  "Website":"http://www.getwox.com",         //插件网站或者个人网站
+  "Website":"http://www.wox.one",         //插件网站或者个人网站
   "IcoPath": "Images\\pic.png",              //插件图标，路径是相对插件根目录的路径
   "ExecuteFileName":"PluginManagement.dll"   //执行文件入口，如果是C#插件则填写DLL路径，如果是pyhton则填写python文件路径
 }

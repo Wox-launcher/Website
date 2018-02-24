@@ -77,7 +77,7 @@ angular.module('woxApp')
             },
             {
                 title: "Themes support",
-                subtitle: "get more themes from http://www.getwox.com/theme"
+                subtitle: "get more themes from http://www.wox.one/theme"
             }
         ];
 

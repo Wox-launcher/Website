@@ -66,5 +66,5 @@ class Main(Wox):
     Main()
 ```
 
-* After you create a plugin, you can copy the plugin to `<WoxDirectory>\Plugins\<YourPluginDirectory>` and restart the Wox. You can so upload the plugin to [Wox Plugin](http://www.getwox.com/plugin),
+* After you create a plugin, you can copy the plugin to `<WoxDirectory>\Plugins\<YourPluginDirectory>` and restart the Wox. You can so upload the plugin to [Wox Plugin](http://www.wox.one/plugin),
 So other users can use your plugins.

@@ -65,5 +65,5 @@ class Main(Wox):
     Main()
 ```
 
-* 创建完插件之后，你可以将插件拷贝到`<WoxDirectory>\Plugins\<YourPluginDirectory> `并重启Wox，同时你也可以将插件上传到[Wox Plugin](http://www.getwox.com/plugin)库，
+* 创建完插件之后，你可以将插件拷贝到`<WoxDirectory>\Plugins\<YourPluginDirectory> `并重启Wox，同时你也可以将插件上传到[Wox Plugin](http://www.wox.one/plugin)库，
 这样其他用户就行安装你写的插件了。
