@@ -1,9 +1,10 @@
-Wox supports plugin development using Python. Wox comes with a Python environment and its standard library, so user didn't need to install python environment anymore.  
-Wox build-in the requests and beautifulsoup4 library, so plugin makers can use them to access web contents.
+Wox supports plugin development using Python. Wox comes with a Python environment and its standard library, so the user doesn't need to install a dedicated python environment anymore.
 
-You can refer this project when you making python plugins：[Wox.Plugin.HackerNews](https://github.com/qianlifeng/Wox.Plugin.HackerNews)
+Wox has the `requests` and `beautifulsoup4` library built-in, so plugin makers can use them to access web contents.
 
-Steps to making a python plugin：  
+You can refer to this project when making a python plugins：[Wox.Plugin.HackerNews](https://github.com/qianlifeng/Wox.Plugin.HackerNews)
+
+Steps to make a python plugin：  
 
 * [Create `plugin.json` file](plugin_json.html)
 
@@ -66,5 +67,4 @@ class Main(Wox):
     Main()
 ```
 
-* After you create a plugin, you can copy the plugin to `<WoxDirectory>\Plugins\<YourPluginDirectory>` and restart the Wox. You can so upload the plugin to [Wox Plugin](http://www.wox.one/plugin),
-So other users can use your plugins.
+* After you create a plugin, you can copy the plugin to `<WoxDirectory>\Plugins\<YourPluginDirectory>` and restart Wox. You can also upload the plugin to [Wox Plugin](http://www.wox.one/plugin), so other users can find and install your plugin.
