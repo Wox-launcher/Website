@@ -1,6 +1,6 @@
 Unipath==1.0
 pillow==2.6.1
-Django==1.7.1
+Django==1.11.28
 djangorestframework==2.4.1
 django-filter==0.8
 django-cors-headers==0.13
