@@ -12,7 +12,7 @@ angular.module('woxApp')
 
         var template = '<ResourceDictionary  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"> \
     <ResourceDictionary.MergedDictionaries> \
-        <ResourceDictionary Source="Base.xaml"></ResourceDictionary> \
+        <ResourceDictionary Source="pack://application:,,,/Themes/Base.xaml"></ResourceDictionary> \
     </ResourceDictionary.MergedDictionaries> \
     <Style x:Key="QueryBoxStyle" BasedOn="{StaticResource BaseQueryBoxStyle}" TargetType="{x:Type TextBox}"> \
         <Setter Property="Background" Value="<queryBoxBackgroundColor>"/> \
