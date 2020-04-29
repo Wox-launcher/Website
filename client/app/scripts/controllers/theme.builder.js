@@ -16,10 +16,8 @@ angular.module('woxApp')
     </ResourceDictionary.MergedDictionaries> \
     <Style x:Key="QueryBoxStyle" BasedOn="{StaticResource BaseQueryBoxStyle}" TargetType="{x:Type TextBox}"> \
         <Setter Property="Background" Value="<queryBoxBackgroundColor>"/> \
-    </Style> \
-    <Style x:Key="QueryTextSuggestionBoxStyle" BasedOn="{StaticResource BaseQueryTextSuggestionBoxStyle}" TargetType="{x:Type TextBox}">\
         <Setter Property="Foreground" Value="<queryBoxTextColor>" /> \
-    </Style>\
+    </Style> \
     <Style x:Key="WindowBorderStyle" BasedOn="{StaticResource BaseWindowBorderStyle}" TargetType="{x:Type Border}"> \
         <Setter Property="Background" Value="<backgroundColor>"></Setter> \
     </Style> \
