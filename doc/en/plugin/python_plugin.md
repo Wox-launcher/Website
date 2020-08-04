@@ -1,7 +1,7 @@
 Wox supports plugin development using Python. Wox comes with a Python environment and its standard library, so user didn't need to install python environment anymore.  
 Wox build-in the requests and beautifulsoup4 library, so plugin makers can use them to access web contents.
 
-You can refer this project when you making python plugins：[Wox.Plugin.HackerNews](https://github.com/qianlifeng/Wox.Plugin.HackerNews)
+You can refer this project when you making python plugins：[Wox.Plugin.HackerNews](https://github.com/Wox-launcher/Wox.Plugin.HackerNews)
 
 Steps to making a python plugin：  
 
@@ -16,8 +16,8 @@ from bs4 import BeautifulSoup
 import webbrowser
 from wox import Wox,WoxAPI
 
-#Your class must inherit from Wox base class https://github.com/qianlifeng/Wox/blob/master/PythonHome/wox.py
-#The wox class here did some works to simplify the communication between Wox and python plugin.
+#Your class must inherit from Wox base class https://github.com/Wox-launcher/Wox/blob/master/JsonRPC/wox.py
+#The Wox class here did some works to simplify the communication between Wox and python plugin.
 class Main(Wox):
 
   def request(self,url):
@@ -44,8 +44,8 @@ class Main(Wox):
         "IcoPath":"Images/app.ico",
         "JsonRPCAction":{
           #You can invoke both your python functions and Wox public APIs .
-          #If you want to invoke Wox public API, you should invoke as following format: Wox.xxxx
-          #you can get the public name from https://github.com/qianlifeng/Wox/blob/master/Wox.Plugin/IPublicAPI.cs,
+          #If you want to invoke Wox public API, you should invoke as following format: Wox.xxx
+          #you can get the public name from https://github.com/Wox-launcher/Wox/blob/master/Wox.Plugin/IPublicAPI.cs,
           #just replace xxx with the name provided in this url
           "method": "openUrl",
           #you MUST pass parater as array
