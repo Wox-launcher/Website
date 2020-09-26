@@ -18,6 +18,7 @@ def get_file_path(instance, filename):
 LANGUAGE_CHOICES = (
     ("CSharp", "CSharp"),
     ("Python", "Python"),
+    ("Executable", "Executable"),
     ("Other", "Other"),
 )
 
