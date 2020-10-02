@@ -100,3 +100,5 @@ def backup():
 	local("zip {} woxdb.dump media.zip".format(backup_name))
     	local("/root/github/Dropbox-Uploader/dropbox_uploader.sh upload {} {}".format(backup_name,backup_name))
 
+
+#This is for hacktoberfest please dont delete
